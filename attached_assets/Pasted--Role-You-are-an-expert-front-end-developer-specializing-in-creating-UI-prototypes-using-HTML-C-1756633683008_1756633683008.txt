@@ -1,0 +1,54 @@
+**Role:** You are an expert front-end developer specializing in creating UI prototypes using HTML, CSS, and vanilla JavaScript. Your task is to build a high-fidelity, interactive prototype of a new section called "Seller Academy" for the Rozetka marketplace seller dashboard.
+
+**Objective:** Create a single, responsive HTML page that represents the main dashboard of the "Rozetka Seller Academy". This page should be visually integrated into the existing seller dashboard, based on a screenshot I will provide.
+
+**Input & Styling Instructions:**
+1.  I will upload a screenshot of the current Rozetka seller dashboard.
+2.  Analyze the screenshot carefully. Your primary goal is **seamless visual integration**.
+3.  You MUST replicate the existing UI style:
+    *   **Color Palette:** Use the exact same colors, especially the signature Rozetka green, grays, and whites.
+    *   **Typography:** Match the font family, sizes, and weights used in the navigation and content areas.
+    *   **Layout & Spacing:** Adhere to the existing layout structure (e.g., left sidebar navigation, main content area) and maintain consistent padding and margins.
+    *   **Component Style:** Buttons, icons, and cards should mimic the style seen in the screenshot.
+
+**Core Task: Build the "Seller Academy" Page**
+
+Imagine the user has clicked on a new link named "Академія" in the left sidebar navigation from the screenshot. You will create the content for this new page.
+
+**Page Structure & Components:**
+
+1.  **Header Section:**
+    *   A welcoming headline: `<h1>Ласкаво просимо до Академії Rozetka</h1>`
+    *   A brief subheading: `<p>Тут ви знайдете все необхідне для зростання вашого бізнесу.</p>`
+    *   A prominent **Search Bar** with placeholder text "Знайти відповідь, курс або статтю..." and a search icon.
+
+2.  **"My Learning Path" Section:**
+    *   A section title: `<h2>Мій шлях навчання</h2>`
+    *   Create a large, highlighted card for the primary onboarding course.
+    *   **Card Title:** "Старт на Rozetka: від реєстрації до першого продажу"
+    *   **Card Content:** Include a short description, an estimated time to complete (e.g., "Приблизно 2 години"), and a progress bar showing partial completion (e.g., 25%).
+    *   **Call-to-Action Button:** A prominent green button labeled "Продовжити навчання".
+
+3.  **"Ключові теми" (Key Topics) Section:**
+    *   A section title: `<h2>Ключові теми</h2>`
+    *   Display a grid of 4-6 clickable category cards.
+    *   Each card should have a relevant icon and a title.
+    *   **Card Titles:** "Робота з товарами", "Маркетинг та Просування", "Аналітика та Звіти", "Логістика та Доставка", "Робота з клієнтами", "Юридичні питання".
+
+4.  **"Рекомендовані курси" (Recommended Courses) Section:**
+    *   A section title: `<h2>Рекомендовані курси</h2>`
+    *   Create a horizontally scrollable carousel of at least 4 course cards.
+    *   Each card should contain:
+        *   A small thumbnail image.
+        *   Course Title (e.g., "Як створити картку товару, яка продає", "Основи SEO для ваших товарів").
+        *   A tag for difficulty/category (e.g., "Для початківців", "Маркетинг").
+        *   A short one-sentence description.
+
+5.  **"Найближчі вебінари" (Upcoming Webinars) Section:**
+    *   A section title: `<h2>Найближчі вебінари</h2>`
+    *   Display 2 cards for upcoming events.
+    *   Each card should show the date, topic, and a button "Зареєструватися".
+    *   **Example:** "25 Вересня - Ефективна реклама на Rozetka: ProSale та нові інструменти".
+
+**Final Output:**
+Provide the complete code in three separate files: `index.html`, `style.css`, and `script.js`. Ensure the HTML is semantic and the CSS is well-organized. The page should be responsive for modern desktop screen sizes.

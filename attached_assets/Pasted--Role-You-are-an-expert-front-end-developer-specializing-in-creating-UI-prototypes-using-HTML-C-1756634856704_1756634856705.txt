@@ -1,0 +1,63 @@
+**Role:** You are an expert front-end developer specializing in creating UI prototypes using HTML, CSS, and vanilla JavaScript. Your task is to build a high-fidelity, interactive prototype of a new section called "Rozetka Seller Hub" for the Rozetka marketplace seller dashboard.
+
+**Objective:** Create a single, responsive HTML page that represents the main dashboard of the "Rozetka Seller Hub". This page should be visually integrated into the existing seller dashboard, based on a screenshot I will provide.
+
+**Input & Styling Instructions:**
+1.  I will upload a screenshot of the current Rozetka seller dashboard.
+2.  Analyze the screenshot carefully. Your primary goal is **seamless visual integration**.
+3.  You MUST replicate the existing UI style:
+    *   **Color Palette:** Use the exact same colors, especially the signature Rozetka green, grays, and whites.
+    *   **Typography:** Match the font family, sizes, and weights.
+    *   **Layout & Spacing:** Adhere to the existing layout structure (e.g., left sidebar navigation, main content area) and maintain consistent padding and margins.
+    *   **Component Style:** Buttons, icons, and cards should mimic the style seen in the screenshot.
+
+**Core Task: Build the "Rozetka Seller Hub" Page**
+
+Imagine the user has clicked on a new link named "Seller Hub" in the left sidebar navigation from the screenshot. You will create the content for this new page.
+
+**Page Structure & Components:**
+
+1.  **Header Section:**
+    *   A welcoming headline: `<h1>Ласкаво просимо до Rozetka Seller Hub</h1>`
+    *   A brief subheading: `<p>Ваш центр знань для зростання бізнесу на Rozetka.</p>`
+    *   A prominent **Search Bar** with placeholder text "Знайти відповідь, курс або статтю..." and a search icon.
+
+2.  **"My Learning Path" Section:**
+    *   A section title: `<h2>Мій шлях навчання</h2>`
+    *   Create a large, highlighted card for the primary onboarding course.
+    *   **Card Title:** "Старт на Rozetka: від реєстрації до першого продажу"
+    *   **Card Content:** Include a short description, an estimated time to complete (e.g., "Приблизно 2 години"), and a progress bar showing partial completion (e.g., 25%).
+    *   **Call-to-Action Button:** A prominent green button labeled "Продовжити навчання".
+
+3.  **"Рекомендовані курси" (Personalized Recommended Courses) Section:**
+    *   A section title: `<h2>Рекомендовані курси</h2>`
+    *   **Crucially, add a personalized subheading** to show that these recommendations are tailored to the seller. For example: `<p class="personalized-subtitle">Підібрано для вас на основі продажів у категорії "Одяг та взуття"</p>`
+    *   Create a horizontally scrollable carousel of at least 4 course cards.
+    *   Each card should contain a thumbnail, title, tag, and description.
+    *   **Make the titles specific and personalized** to reflect the seller's context. Examples:
+        *   Course 1: Title: "Як фотографувати одяг для максимальних продажів", Tag: "Робота з товарами".
+        *   Course 2: Title: "Робота з розмірними сітками: як уникнути повернень", Tag: "Клієнтський сервіс".
+        *   Course 3: Title: "Сезонний маркетинг для категорії 'Мода'", Tag: "Маркетинг".
+        *   Course 4: Title: "Оптимізація логістики для невеликих товарів", Tag: "Доставка".
+
+4.  **"Історія навчання" (Learning History) Section:**
+    *   A section title: `<h2>Історія навчання</h2>`
+    *   Create a list or a simple table displaying 3-4 completed modules.
+    *   Each entry should include:
+        *   The course title (e.g., "Основи SEO для ваших товарів").
+        *   The completion date (e.g., "Завершено: 15.08.2025").
+        *   A link or a small button labeled "Переглянути знову".
+
+5.  **"Ключові теми" (Key Topics) Section:**
+    *   A section title: `<h2>Ключові теми</h2>`
+    *   Display a grid of 4-6 clickable category cards with icons and titles.
+    *   **Card Titles:** "Робота з товарами", "Маркетинг та Просування", "Аналітика та Звіти", "Логістика та Доставка", "Робота з клієнтами", "Юридичні питання".
+
+6.  **"Найближчі вебінари" (Upcoming Webinars) Section:**
+    *   A section title: `<h2>Найближчі вебінари</h2>`
+    *   Display 2 cards for upcoming events.
+    *   Each card should show the date, topic, and a button "Зареєструватися".
+    *   **Example:** "25 Вересня - Ефективна реклама на Rozetka: нові інструменти та стратегії".
+
+**Final Output:**
+Provide the complete code in three separate files: `index.html`, `style.css`, and `script.js`. Ensure the HTML is semantic and the CSS is well-organized. The page should be responsive for modern desktop screen sizes.
