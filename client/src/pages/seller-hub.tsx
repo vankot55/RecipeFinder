@@ -2,6 +2,8 @@ import Sidebar from "@/components/seller-hub/sidebar";
 import TopBar from "@/components/seller-hub/top-bar";
 import WelcomeSection from "@/components/seller-hub/welcome-section";
 import LearningPath from "@/components/seller-hub/learning-path";
+import ShopOpportunities from "@/components/seller-hub/shop-opportunities";
+import QuickTips from "@/components/seller-hub/quick-tips";
 import RecommendedCourses from "@/components/seller-hub/recommended-courses";
 import LearningHistory from "@/components/seller-hub/learning-history";
 import KeyTopics from "@/components/seller-hub/key-topics";
@@ -16,6 +18,8 @@ export default function SellerHub() {
         <div className="p-6 space-y-8">
           <WelcomeSection />
           <LearningPath />
+          <ShopOpportunities />
+          <QuickTips />
           <RecommendedCourses />
           <LearningHistory />
           <KeyTopics />
