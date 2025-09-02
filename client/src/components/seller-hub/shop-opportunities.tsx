@@ -1,6 +1,9 @@
-import { AlertTriangle, TrendingUp, Gift, Camera } from "lucide-react";
+import { AlertTriangle, TrendingUp, Megaphone, Camera, X, Sparkles } from "lucide-react";
+import { useState } from "react";
 
 export default function ShopOpportunities() {
+  const [dismissedCards, setDismissedCards] = useState<number[]>([]);
+
   const opportunities = [
     {
       type: "warning",
@@ -24,29 +27,53 @@ export default function ShopOpportunities() {
     },
     {
       type: "opportunity",
-      icon: Gift,
+      icon: Megaphone,
       iconColor: "text-green-500",
       bgColor: "bg-green-50 border-green-200",
-      title: "Ви ще не використовуєте Промокоди",
-      description: "Пройдіть короткий туторіал та залучіть більше покупців за допомогою знижок.",
-      action: "Налаштувати промокоди",
+      title: "Ви ще не використовуєте Рекламу на Rozetka",
+      description: "Пройдіть короткий туторіал та залучіть більше покупців за допомогою реклами.",
+      action: "Запустити кампанію",
       actionColor: "bg-green-500 hover:bg-green-600"
+    },
+    {
+      type: "achievement",
+      icon: Sparkles,
+      iconColor: "text-purple-500",
+      bgColor: "bg-purple-50 border-purple-200",
+      title: "🎉 Вітаємо! Ваші продажі в категорії \"Сукні\" зросли на 30%",
+      description: "За останній місяць ви показали відмінні результати. Дізнайтесь, як масштабувати успіх.",
+      action: "Масштабувати успіх",
+      actionColor: "bg-purple-500 hover:bg-purple-600"
     }
   ];
+
+  const handleDismiss = (index: number) => {
+    setDismissedCards([...dismissedCards, index]);
+  };
+
+  const visibleOpportunities = opportunities.filter((_, index) => !dismissedCards.includes(index));
 
   return (
     <section>
       <h2 className="text-xl font-semibold text-foreground mb-4">Можливості для вашого магазину</h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        {opportunities.map((opportunity, index) => {
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {visibleOpportunities.map((opportunity, originalIndex) => {
           const IconComponent = opportunity.icon;
+          const index = opportunities.indexOf(opportunity);
           return (
             <div 
               key={index}
-              className={`${opportunity.bgColor} rounded-lg border p-4 card-hover`}
+              className={`${opportunity.bgColor} rounded-lg border p-4 card-hover relative`}
               data-testid={`shop-opportunity-${index}`}
             >
-              <div className="flex items-start space-x-3">
+              <button
+                onClick={() => handleDismiss(index)}
+                className="absolute top-2 right-2 p-1 rounded-full hover:bg-white/50 transition-colors duration-200"
+                data-testid={`dismiss-opportunity-${index}`}
+              >
+                <X className="w-4 h-4 text-muted-foreground" />
+              </button>
+              <div className="flex items-start space-x-3 pr-6">
                 <div className={`p-2 rounded-lg bg-white`}>
                   <IconComponent className={`w-5 h-5 ${opportunity.iconColor}`} />
                 </div>

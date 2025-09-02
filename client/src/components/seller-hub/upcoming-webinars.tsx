@@ -31,7 +31,7 @@ export default function UpcomingWebinars() {
       case "live":
         return { text: "Приєднатися до ефіру", color: "bg-red-500 hover:bg-red-600" };
       case "recorded":
-        return { text: "Переглянути запис", color: "bg-gray-500 hover:bg-gray-600" };
+        return { text: "Дивитись запис", color: "bg-gray-500 hover:bg-gray-600" };
       default:
         return { text: "Зареєструватися", color: "bg-secondary text-secondary-foreground border border-border hover:bg-accent" };
     }
