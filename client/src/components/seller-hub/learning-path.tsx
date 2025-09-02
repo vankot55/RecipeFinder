@@ -1,6 +1,12 @@
 import { Progress } from "@/components/ui/progress";
+import { Link } from "wouter";
 
 export default function LearningPath() {
+  // Calculate progress based on completed tasks (4 out of 12 tasks completed = 33%)
+  const completedTasks = 4;
+  const totalTasks = 12;
+  const progressPercentage = Math.round((completedTasks / totalTasks) * 100);
+
   return (
     <section>
       <h2 className="text-xl font-semibold text-foreground mb-4">Мій шлях навчання</h2>
@@ -16,7 +22,7 @@ export default function LearningPath() {
             </p>
             <div className="flex items-center space-x-4 text-sm text-muted-foreground">
               <span>⏱️ Приблизно 2 години</span>
-              <span>📚 5 з 20 модулів завершено</span>
+              <span>📚 {completedTasks} з {totalTasks} завдань завершено</span>
             </div>
           </div>
           <div className="ml-6">
@@ -31,17 +37,18 @@ export default function LearningPath() {
         <div className="mb-4">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-medium text-foreground">Прогрес курсу</span>
-            <span className="text-sm text-muted-foreground" data-testid="progress-percentage">25%</span>
+            <span className="text-sm text-muted-foreground" data-testid="progress-percentage">{progressPercentage}%</span>
           </div>
-          <Progress value={25} className="h-2" />
+          <Progress value={progressPercentage} className="h-2" />
         </div>
         
-        <button 
-          className="rozetka-green rozetka-green-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+        <Link 
+          href="/learning-plan"
+          className="inline-block rozetka-green rozetka-green-hover text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
           data-testid="continue-learning-button"
         >
           Продовжити навчання
-        </button>
+        </Link>
       </div>
     </section>
   );
