@@ -25,8 +25,8 @@ export default function WelcomeSection() {
   };
 
   return (
-    <section className="bg-white rounded-lg border border-border p-6">
-      <h1 className="text-3xl font-semibold text-foreground mb-2" data-testid="welcome-title">
+    <section className="hub-card p-6">
+      <h1 className="text-3xl font-bold text-foreground mb-2" data-testid="welcome-title">
         Ласкаво просимо до Rozetka Seller Hub
       </h1>
       <p className="text-muted-foreground mb-6">

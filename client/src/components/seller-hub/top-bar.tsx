@@ -1,4 +1,4 @@
-import { Award } from "lucide-react";
+import { Award, Star } from "lucide-react";
 import { useState } from "react";
 import Achievements from "./achievements";
 
@@ -18,6 +18,15 @@ export default function TopBar() {
             </p>
           </div>
           <div className="flex items-center space-x-4">
+            {/* Experience Points */}
+            <div className="flex items-center space-x-3">
+              <div className="experience-points">
+                <Star className="w-4 h-4 mr-1 inline" />
+                1,250 XP
+              </div>
+              <div className="text-xs text-gray-500">Рівень 5</div>
+            </div>
+            
             <span className="text-sm text-muted-foreground" data-testid="balance-amount">
               ₴ 19 900,56 грн
             </span>

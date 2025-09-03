@@ -55,7 +55,7 @@ export default function ShopOpportunities() {
 
   return (
     <section>
-      <h2 className="text-xl font-semibold text-foreground mb-4">Можливості для вашого магазину</h2>
+      <h2 className="section-title">Можливості для вашого магазину</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {visibleOpportunities.map((opportunity, originalIndex) => {
           const IconComponent = opportunity.icon;

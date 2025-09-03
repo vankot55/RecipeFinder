@@ -24,8 +24,8 @@ export default function StatusDashboard() {
 
   return (
     <section className="mb-6">
-      <div className="bg-white rounded-lg border border-border p-4">
-        <h3 className="text-sm font-medium text-muted-foreground mb-3">Мій статус</h3>
+      <div className="hub-card p-4">
+        <h3 className="text-lg font-bold text-gray-900 mb-4">Мій статус</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {stats.map((stat, index) => {
             const IconComponent = stat.icon;
